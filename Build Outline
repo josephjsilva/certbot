@@ -1,0 +1,21 @@
+Quick build with online model
+
+  Create a cloud account with an AI provider (GCP, OpenAI, etc.)
+  Create a Messaging account (Telegram, Whatsapp, etc.)
+  Pre-install OpenClaw dependencies (Node.js, npm)
+  Install OpenClaw
+  Complete configuration (Model, Connector)
+  System Prompt
+  Complete Connector
+
+Full build with local model
+
+  Create a cloud account with an AI provider (GCP, OpenAI, etc.)
+  Create a Messaging account (Telegram, Whatsapp, etc.)
+  Install LMStudio and download model (google – gemma-4-e4b)
+  Start LMS Server
+  Pre-install OpenClaw dependencies (Node.js, npm)
+  Install OpenClaw
+  Complete configuration (Model - connect to LMStudio Server, Connector)
+  System Prompt
+  Complete Connector
