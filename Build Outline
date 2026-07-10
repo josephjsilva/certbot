@@ -27,3 +27,23 @@ System Prompt
 
 Security Prompt
   In Telegram you only answer questions; no other skills can be used via Telegram.
+
+Example channnels section from openclaw.json to support Telegram groups and DMs:
+//this prevents abuse of bot over untrusted DMs this only allows DMs from owner or other IDs added to the file
+//this assumes you want your bot to answer in group chats
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "groupPolicy": "open",
+      "groups": {
+        "*": {
+          "requireMention": true
+        }
+      },
+      "botToken": "****933011:AAE6W2yJy6r9OBJu3JwJv655Dny9GIv****",
+      "dmPolicy": "allowlist",
+      "allowFrom": [
+        **104314**
+      ]
+    }
+  },
