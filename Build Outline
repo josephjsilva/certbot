@@ -40,7 +40,7 @@ Full build with local model
     go to server settings and generate an API key and store securely
     Start LMS server
 
-  Perform install steps above, except when selecting a model during configuration select LMStudio and your local model  
+  Perform install steps above, except when selecting a model during configuration select LMStudio and local model  
 
 Example channnels section from openclaw.json to support Telegram groups and DMs:
 //this prevents abuse of bot over untrusted DMs this only allows DMs from owner or other IDs added to the file
