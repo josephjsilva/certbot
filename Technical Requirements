@@ -1,13 +1,18 @@
 General requirements
   Operating System (Windows, MacOS, Linux)
+    Windows 11
+    MacOS verion 13.5 and higher (Apple Silicon required)
+    Linux Ubuntu 24.04 and higher (or equivalent version of Fedora, Arch, etc.)
   Pre-built Agent framework (OpenClaw, Hermes, etc.)
-  Messaging Account (Telegram, Whatsapp, etc.)
+  Messaging account and Bot account (Telegram, Whatsapp, etc.)
 
 If using an Online Model
   16GB RAM, 120GB free disk space
+  GPU not required but recommended
   Cloud model account with API Key
 
 For an Offline Model (personally recommend Gemma 4 E4B)*
   Multi-Core CPU and GPU with minimum of 8GB VRAM
-  24GB RAM (36GB recommended), 200GB free disk space
-  Local server (example LMStudio) - Local model (recommend not larger than 8GB memory requirement)
+  Recommend 24GB RAM (36GB recommended) and 16GB VRAM or unified memory of 36GB or more
+  200GB free disk space, 1TB recommended
+  Local server (example LMStudio) - Local model (recommend not larger than 8GB memory requirement unless large VRAM system)
