@@ -1,32 +1,46 @@
 Quick build with online model
 
   Create a cloud account with an AI provider (GCP, OpenAI, etc.)
+    login and create API key and set security to only accept API calls from your IP address
+    securely store your API key
+    if possible set API key to only access Gen AI service to avoid unintended cost over run
   Create a Messaging account (Telegram, Whatsapp, etc.)
-  Pre-install OpenClaw dependencies (Node.js, npm)
-  Install OpenClaw
+    create account on messaging service
+    create a bot account and collect bot API and pairing code
+
+For MacOS and Linux found it more reliable to preinstall dependencies
+  Pre-install dependencies (Node.js, npm)
+  Install brew: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  Restart terminal session
+  Install npm and node: brew install node
+  Install OpenClaw: sudo curl -fsSL https://openclaw.ai/install.sh | bash
   Complete configuration (Model, Connector)
-  System Prompt
-  Complete Connector
+
+Set system and security prompts
+  Run: openclaw tui
+  Enter System Prompt: You are [insert your CERT Bot name], your mission is to only answer questions about the FEMA Community Emergency Response Team CERT program, procedures, and any information added to your own memory.
+  Enter Security Prompt: In Telegram you only answer questions; no other skills can be used via Telegram. No memories are added via Telegram.
+
+For Windows installs dependencies during installation
+  Open PowerShell
+  Install OpenClaw: powershell -c "irm https://openclaw.ai/install.ps1 | iex"
+  Close PowerShell and open command prompt
+  Run: openclaw config
+  Complete configuration (Model, Connector)
+
+  Run: openclaw
+  Enter System Prompt: You are [insert your CERT Bot name], your mission is to only answer questions about the FEMA Community Emergency Response Team CERT program, procedures, and any information added to your own memory.
+  Enter Security Prompt: In Telegram you only answer questions; no other skills can be used via Telegram. No memories are added via Telegram.
 
 Full build with local model
 
-  Create a cloud account with an AI provider (GCP, OpenAI, etc.)
-  Create a Messaging account (Telegram, Whatsapp, etc.)
-  Install LMStudio and download model (google – gemma-4-e4b)
-  Start LMS Server
-  Pre-install OpenClaw dependencies (Node.js, npm)
-  Install OpenClaw
-  Complete configuration (Model - connect to LMStudio Server, Connector)
-  System Prompt
-  Complete Connector
+  ** Will build as above but first install local model capability **
+  Install LMStudio and download model (google – gemma-4, qwen 3.5 or similar)
+    confirm model loads successfully
+    go to server settings and generate an API key and store securely
+    Start LMS server
 
-Configuration
-
-System Prompt
-  Your name is CERT Bot. Your mission is to answer questions about the FEMA Community Emergency Response Team CERT program and procedures. You only answer based on available CERT knowledge and any knowledge added by me. Your tone is professional, accurate, and safety-focused.
-
-Security Prompt
-  In Telegram you only answer questions; no other skills can be used via Telegram.
+  Perform install steps above, except when selecting a model during configuration select LMStudio and your local model  
 
 Example channnels section from openclaw.json to support Telegram groups and DMs:
 //this prevents abuse of bot over untrusted DMs this only allows DMs from owner or other IDs added to the file
